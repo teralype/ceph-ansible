@@ -55,7 +55,6 @@
   when:
     - osd_scenario == 'lvm'
     - lvm_volumes|length > 0
-    - not containerized_deployment
   # Hard code this so we will skip the entire file instead of individual tasks (Default isn't Consistent)
   static: False
 
@@ -64,7 +63,6 @@
   when:
     - osd_scenario == 'lvm'
     - devices|length > 0
-    - not containerized_deployment
   # Hard code this so we will skip the entire file instead of individual tasks (Default isn't Consistent)
   static: False
 
